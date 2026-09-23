@@ -1,0 +1,29 @@
+---
+description: Edit lib/custom_code for VS Code Push; give FlutterFlow steps for lib/pages
+alwaysApply: true
+---
+
+# FlutterFlow edit vs instruct
+
+This app is a FlutterFlow project. FlutterFlow regenerates `lib/pages` (and page models). Local edits there are overwritten on Local Run, Pull Latest, or regenerate.
+
+## Edit these (then user Pushes via VS Code)
+
+- `lib/custom_code/actions/**`
+- `lib/custom_code/widgets/**`
+- `lib/flutter_flow/custom_functions.dart` when needed
+- Keep FlutterFlow headers (`DO NOT REMOVE OR MODIFY THE CODE ABOVE`).
+
+## Do not edit — give manual FlutterFlow steps
+
+- `lib/pages/**` (Wait Page, Dashboard, Slot Selection, all `*_widget.dart` / `*_model.dart`)
+- Other builder-generated UI (`lib/components` page-like generated widgets)
+
+Numbered builder steps: which page, which action, order, await vs parallel. Never patch `*_widget.dart`.
+
+## Other
+
+- Durable logic belongs in Custom Actions (`setupFCMListener`, `synFCMToken`, `mirrorMatchingDataToRTDB`, etc.).
+- Match FCM send path uses only `appStats/{uid}/f` (all slots in that node).
+- Leftover Cloud Functions: paste-ready JS and which folder to deploy. Do not `firebase deploy` listed 23 from `v2-run`.
+- Do not edit FlutterFlow roaming copies under `%AppData%/Roaming/FlutterFlow/` to “fix” pages.

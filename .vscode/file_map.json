@@ -1,0 +1,688 @@
+{
+  "lib/custom_code/actions/load_country_codes.dart": {
+    "old_identifier_name": "loadCountryCodes",
+    "new_identifier_name": "loadCountryCodes",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "5497b4fafc02d279bef719c1a781d7d68a92608694210d87127899001d3c0eaf",
+    "original_checksum": "5497b4fafc02d279bef719c1a781d7d68a92608694210d87127899001d3c0eaf"
+  },
+  "lib/custom_code/actions/init_hive.dart": {
+    "old_identifier_name": "initHive",
+    "new_identifier_name": "initHive",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "e633f2edf4fedae99a6e2c6e6c1d6ce74c62bd90be3fcd2314fdb664bc189bb5",
+    "original_checksum": "e633f2edf4fedae99a6e2c6e6c1d6ce74c62bd90be3fcd2314fdb664bc189bb5"
+  },
+  "lib/custom_code/actions/is_user_profile_local.dart": {
+    "old_identifier_name": "isUserProfileLocal",
+    "new_identifier_name": "isUserProfileLocal",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "ee34f8b6bb3998500f412b661a27515e7e920269d2c37c11666597ba87497473",
+    "original_checksum": "ee34f8b6bb3998500f412b661a27515e7e920269d2c37c11666597ba87497473"
+  },
+  "lib/custom_code/actions/sync_firestore_to_hive.dart": {
+    "old_identifier_name": "syncFirestoreToHive",
+    "new_identifier_name": "syncFirestoreToHive",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "02e182129460ac01eedc86af7d687aa59b9f41f4158f466bc9ff9b038ffb108f",
+    "original_checksum": "02e182129460ac01eedc86af7d687aa59b9f41f4158f466bc9ff9b038ffb108f"
+  },
+  "lib/custom_code/actions/generate_thumbnail.dart": {
+    "old_identifier_name": "generateThumbnail",
+    "new_identifier_name": "generateThumbnail",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "48eddb4e0fc1f045f4b432b4132e2de60ddaf31ca5e14ffc52e48254b6c4b9db",
+    "original_checksum": "48eddb4e0fc1f045f4b432b4132e2de60ddaf31ca5e14ffc52e48254b6c4b9db"
+  },
+  "lib/custom_code/actions/save_image_locally.dart": {
+    "old_identifier_name": "saveImageLocally",
+    "new_identifier_name": "saveImageLocally",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "164ef7d2a0b80d1598235add11e34793b02b92778ca0577d9ebb50203436406e",
+    "original_checksum": "164ef7d2a0b80d1598235add11e34793b02b92778ca0577d9ebb50203436406e"
+  },
+  "lib/custom_code/actions/upload_to_firebase.dart": {
+    "old_identifier_name": "uploadToFirebase",
+    "new_identifier_name": "uploadToFirebase",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "74a20cfc6fe8462024a5be4522850f0864dca37cad043a37710253037b50b803",
+    "original_checksum": "74a20cfc6fe8462024a5be4522850f0864dca37cad043a37710253037b50b803"
+  },
+  "lib/custom_code/actions/get_profile_data.dart": {
+    "old_identifier_name": "getProfileData",
+    "new_identifier_name": "getProfileData",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "10fba25b3ee44d52c8d2e96b570dae1a3991839072d8b9797c52e2eab71e32c9",
+    "original_checksum": "10fba25b3ee44d52c8d2e96b570dae1a3991839072d8b9797c52e2eab71e32c9"
+  },
+  "lib/custom_code/actions/get_from_hive.dart": {
+    "old_identifier_name": "getFromHive",
+    "new_identifier_name": "getFromHive",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "4fdf099a2bd912064f655ac15a6c27148042e9555dd92b68192c109af7a0363b",
+    "original_checksum": "4fdf099a2bd912064f655ac15a6c27148042e9555dd92b68192c109af7a0363b"
+  },
+  "lib/custom_code/actions/process_profile_images.dart": {
+    "old_identifier_name": "processProfileImages",
+    "new_identifier_name": "processProfileImages",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "131bc654974b1d6dba348bc34bc2dacaed5d485573eca61bd55c3fe1a6117d4c",
+    "original_checksum": "131bc654974b1d6dba348bc34bc2dacaed5d485573eca61bd55c3fe1a6117d4c"
+  },
+  "lib/custom_code/actions/get_display_image.dart": {
+    "old_identifier_name": "getDisplayImage",
+    "new_identifier_name": "getDisplayImage",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "eaa5576a78a1230194813a5d83fd89a8eeeaedaf901845677613755b9290b47d",
+    "original_checksum": "eaa5576a78a1230194813a5d83fd89a8eeeaedaf901845677613755b9290b47d"
+  },
+  "lib/custom_code/actions/enter_matching_slot.dart": {
+    "old_identifier_name": "enterMatchingSlot",
+    "new_identifier_name": "enterMatchingSlot",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "8168028ae1ab5783dadfe1835d920040c1b67bc919f0de375d37c4bbe39ef15a",
+    "original_checksum": "8168028ae1ab5783dadfe1835d920040c1b67bc919f0de375d37c4bbe39ef15a"
+  },
+  "lib/custom_code/actions/mirror_matching_data_to_r_t_d_b.dart": {
+    "old_identifier_name": "mirrorMatchingDataToRTDB",
+    "new_identifier_name": "mirrorMatchingDataToRTDB",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "759b0ac8c08e32156ae7bba947f9bc7436542b2597db954071b8e3bce9023be1",
+    "original_checksum": "759b0ac8c08e32156ae7bba947f9bc7436542b2597db954071b8e3bce9023be1"
+  },
+  "lib/custom_code/actions/save_to_hive.dart": {
+    "old_identifier_name": "saveToHive",
+    "new_identifier_name": "saveToHive",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "24ba33b76bc226c22e20bc3ddef6e5c7263f6072b8d518bc17b70cf6ccd163c8",
+    "original_checksum": "24ba33b76bc226c22e20bc3ddef6e5c7263f6072b8d518bc17b70cf6ccd163c8"
+  },
+  "lib/custom_code/actions/process_user_ready_status.dart": {
+    "old_identifier_name": "processUserReadyStatus",
+    "new_identifier_name": "processUserReadyStatus",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "16a82e6bbca00f3cddfe6f2374a5377b86bb5d83c817e0f6b674840d94d0c634",
+    "original_checksum": "16a82e6bbca00f3cddfe6f2374a5377b86bb5d83c817e0f6b674840d94d0c634"
+  },
+  "lib/custom_code/actions/get_future_slot_timestamps.dart": {
+    "old_identifier_name": "getFutureSlotTimestamps",
+    "new_identifier_name": "getFutureSlotTimestamps",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "abe612053197c7093aa2b774c8e3b12ca25cdc0bde2df929c0aaa0dc37c40ad4",
+    "original_checksum": "abe612053197c7093aa2b774c8e3b12ca25cdc0bde2df929c0aaa0dc37c40ad4"
+  },
+  "lib/custom_code/actions/get_active_slot_index.dart": {
+    "old_identifier_name": "getActiveSlotIndex",
+    "new_identifier_name": "getActiveSlotIndex",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "3bdd2f550f551fea79bf8cb40c7ff9ac4181e3223bd2f1abda8e42030a596c53",
+    "original_checksum": "3bdd2f550f551fea79bf8cb40c7ff9ac4181e3223bd2f1abda8e42030a596c53"
+  },
+  "lib/custom_code/actions/get_profile_and_trait_data.dart": {
+    "old_identifier_name": "getProfileAndTraitData",
+    "new_identifier_name": "getProfileAndTraitData",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "559bd5a9e9d602e40d086de1b792cc5a2f1928ae5b89d11c5922e3149ad95db7",
+    "original_checksum": "559bd5a9e9d602e40d086de1b792cc5a2f1928ae5b89d11c5922e3149ad95db7"
+  },
+  "lib/custom_code/actions/sync_app_stats.dart": {
+    "old_identifier_name": "syncAppStats",
+    "new_identifier_name": "syncAppStats",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "8641ec3b1fb7c3ceaf7bb383c30441885ae51ecbe12657817329057c09336270",
+    "original_checksum": "8641ec3b1fb7c3ceaf7bb383c30441885ae51ecbe12657817329057c09336270"
+  },
+  "lib/custom_code/actions/syn_f_c_m_token.dart": {
+    "old_identifier_name": "synFCMToken",
+    "new_identifier_name": "synFCMToken",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "aaa46495d14ab7b3e15b8c284f981f394501a696440d6e553cd44b215bb94b1b",
+    "original_checksum": "aaa46495d14ab7b3e15b8c284f981f394501a696440d6e553cd44b215bb94b1b"
+  },
+  "lib/custom_code/actions/setup_pulse_listener.dart": {
+    "old_identifier_name": "setupPulseListener",
+    "new_identifier_name": "setupPulseListener",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "560cb0d463544be28fb699dc9eebca21b403869b430973bd6d99b37ccd1d9e4b",
+    "original_checksum": "560cb0d463544be28fb699dc9eebca21b403869b430973bd6d99b37ccd1d9e4b"
+  },
+  "lib/custom_code/actions/sync_user_images_to_local.dart": {
+    "old_identifier_name": "syncUserImagesToLocal",
+    "new_identifier_name": "syncUserImagesToLocal",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "ff21d1c6502f1f557cb7d473a3e36029c6b30489cae9173a4e0d0a926e154f16",
+    "original_checksum": "ff21d1c6502f1f557cb7d473a3e36029c6b30489cae9173a4e0d0a926e154f16"
+  },
+  "lib/custom_code/actions/rtdb_to_app_state.dart": {
+    "old_identifier_name": "rtdbToAppState",
+    "new_identifier_name": "rtdbToAppState",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "4f3afec79770505d7b8d8787fd72edc0af50cee3d9cebc8c7e4c9ae3a284666e",
+    "original_checksum": "4f3afec79770505d7b8d8787fd72edc0af50cee3d9cebc8c7e4c9ae3a284666e"
+  },
+  "lib/custom_code/actions/setup_f_c_m_listener.dart": {
+    "old_identifier_name": "setupFCMListener",
+    "new_identifier_name": "setupFCMListener",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "5993a417ee7b234425efae2ddf58c79c4d8882dd18cc96e26ea7abc9edcb7feb",
+    "original_checksum": "5993a417ee7b234425efae2ddf58c79c4d8882dd18cc96e26ea7abc9edcb7feb"
+  },
+  "lib/custom_code/actions/call_handshake_action.dart": {
+    "old_identifier_name": "callHandshakeAction",
+    "new_identifier_name": "callHandshakeAction",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "f573bbb54227ad2c186fea6b0feb6cf97519a90681070839916ec402e4c2eca1",
+    "original_checksum": "f573bbb54227ad2c186fea6b0feb6cf97519a90681070839916ec402e4c2eca1"
+  },
+  "lib/custom_code/actions/watch_handshake_status.dart": {
+    "old_identifier_name": "watchHandshakeStatus",
+    "new_identifier_name": "watchHandshakeStatus",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "05e0eb57fd36033e32022900c7a65df5ada530473f86be7dc65ea201204c2d24",
+    "original_checksum": "05e0eb57fd36033e32022900c7a65df5ada530473f86be7dc65ea201204c2d24"
+  },
+  "lib/custom_code/actions/process_and_send_flow.dart": {
+    "old_identifier_name": "processAndSendFlow",
+    "new_identifier_name": "processAndSendFlow",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "9dd9442a1c95a667b3e85e5269bc4f5a115bfc64a1ce90223e951987275c88dc",
+    "original_checksum": "9dd9442a1c95a667b3e85e5269bc4f5a115bfc64a1ce90223e951987275c88dc"
+  },
+  "lib/custom_code/actions/perm_process_and_send_flow.dart": {
+    "old_identifier_name": "permProcessAndSendFlow",
+    "new_identifier_name": "permProcessAndSendFlow",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "0492738bdd5d79e2a140fd6f4f3e7684488e6bfc21c298077f0836f3e8cfef82",
+    "original_checksum": "0492738bdd5d79e2a140fd6f4f3e7684488e6bfc21c298077f0836f3e8cfef82"
+  },
+  "lib/custom_code/actions/check_batch_safety_m_l.dart": {
+    "old_identifier_name": "checkBatchSafetyML",
+    "new_identifier_name": "checkBatchSafetyML",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "4552ec2904a8a7265050b60e93ca038183b65d5116993f87babc55945d8a595e",
+    "original_checksum": "4552ec2904a8a7265050b60e93ca038183b65d5116993f87babc55945d8a595e"
+  },
+  "lib/custom_code/actions/analyze_safety_and_mood.dart": {
+    "old_identifier_name": "analyzeSafetyAndMood",
+    "new_identifier_name": "analyzeSafetyAndMood",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "10a4dad6c4f532312e0daa3b2593993a5160ca7e061eb12a69271f4974200aed",
+    "original_checksum": "10a4dad6c4f532312e0daa3b2593993a5160ca7e061eb12a69271f4974200aed"
+  },
+  "lib/custom_code/actions/initialize_m_l_kit.dart": {
+    "old_identifier_name": "initializeMLKit",
+    "new_identifier_name": "initializeMLKit",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "9d0eb8d3a634e09d7ab445b45aa389320d67dd361d0c4ded14a37a8cc05584da",
+    "original_checksum": "9d0eb8d3a634e09d7ab445b45aa389320d67dd361d0c4ded14a37a8cc05584da"
+  },
+  "lib/custom_code/actions/start_chat_stream.dart": {
+    "old_identifier_name": "startChatStream",
+    "new_identifier_name": "startChatStream",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "3a2407f139a4187ebcfd4425b0a9516b6f2b0184dce8046f9f9fd77ae6dc4d22",
+    "original_checksum": "3a2407f139a4187ebcfd4425b0a9516b6f2b0184dce8046f9f9fd77ae6dc4d22"
+  },
+  "lib/custom_code/actions/trigger_chat_analysis.dart": {
+    "old_identifier_name": "triggerChatAnalysis",
+    "new_identifier_name": "triggerChatAnalysis",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "f19c34290d10f7dabcfd2897d236b807413f3d9e144d731794dec75f2971c55d",
+    "original_checksum": "f19c34290d10f7dabcfd2897d236b807413f3d9e144d731794dec75f2971c55d"
+  },
+  "lib/custom_code/actions/wipe_app_state_and_hive.dart": {
+    "old_identifier_name": "wipeAppStateAndHive",
+    "new_identifier_name": "wipeAppStateAndHive",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "cee0092f56d7e5a7a4e8da1cdfa6d565e797eade09d33ead14e094ed1555cc80",
+    "original_checksum": "cee0092f56d7e5a7a4e8da1cdfa6d565e797eade09d33ead14e094ed1555cc80"
+  },
+  "lib/custom_code/actions/check_errors.dart": {
+    "old_identifier_name": "checkErrors",
+    "new_identifier_name": "checkErrors",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "2f9a9076ee5bf23a2bf08b00792bad4d764d8460c9200256661fa06a0c5f67a3",
+    "original_checksum": "2f9a9076ee5bf23a2bf08b00792bad4d764d8460c9200256661fa06a0c5f67a3"
+  },
+  "lib/custom_code/actions/initiate_reveal_request.dart": {
+    "old_identifier_name": "initiateRevealRequest",
+    "new_identifier_name": "initiateRevealRequest",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "6874a810d7579eb2d18dd13c2f2e5ddb32b7e4ec0c2c8837d0113b4212d3ba89",
+    "original_checksum": "6874a810d7579eb2d18dd13c2f2e5ddb32b7e4ec0c2c8837d0113b4212d3ba89"
+  },
+  "lib/custom_code/actions/update_chat_feeling.dart": {
+    "old_identifier_name": "updateChatFeeling",
+    "new_identifier_name": "updateChatFeeling",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "a5ec472f4fc4db7f96ed519b757bd07716446ed4c227d3ac076087941b863bd4",
+    "original_checksum": "a5ec472f4fc4db7f96ed519b757bd07716446ed4c227d3ac076087941b863bd4"
+  },
+  "lib/custom_code/actions/setup_feeling_listener.dart": {
+    "old_identifier_name": "setupFeelingListener",
+    "new_identifier_name": "setupFeelingListener",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "830d8d856f2bf67c3ddddc7cbdb901b11be871e4dd48e3751cd73ce6c7c45470",
+    "original_checksum": "830d8d856f2bf67c3ddddc7cbdb901b11be871e4dd48e3751cd73ce6c7c45470"
+  },
+  "lib/custom_code/actions/cancel_all_chat_streams.dart": {
+    "old_identifier_name": "cancelAllChatStreams",
+    "new_identifier_name": "cancelAllChatStreams",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "1684aa0074be4f8486c4329c2809327520f335ed52841a62da66ac211a29cf9b",
+    "original_checksum": "1684aa0074be4f8486c4329c2809327520f335ed52841a62da66ac211a29cf9b"
+  },
+  "lib/custom_code/actions/call_extend_chat_action.dart": {
+    "old_identifier_name": "callExtendChatAction",
+    "new_identifier_name": "callExtendChatAction",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "64654e15fc942e02416f502b43df9bb8f4e2a0e208657e84b19add21a0ce9047",
+    "original_checksum": "64654e15fc942e02416f502b43df9bb8f4e2a0e208657e84b19add21a0ce9047"
+  },
+  "lib/custom_code/actions/call_reveal_action.dart": {
+    "old_identifier_name": "callRevealAction",
+    "new_identifier_name": "callRevealAction",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "038f071d1bba89e3fdf3bf4243d7f49a95b772115005a7eb92f3dfa9bbce9a61",
+    "original_checksum": "038f071d1bba89e3fdf3bf4243d7f49a95b772115005a7eb92f3dfa9bbce9a61"
+  },
+  "lib/custom_code/actions/fetch_revealed_profile.dart": {
+    "old_identifier_name": "fetchRevealedProfile",
+    "new_identifier_name": "fetchRevealedProfile",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "65cf4dcd3275210e9beee0302d541449567d8f0f3fe734c764c3bdac19c1ae9e",
+    "original_checksum": "65cf4dcd3275210e9beee0302d541449567d8f0f3fe734c764c3bdac19c1ae9e"
+  },
+  "lib/custom_code/actions/sync_original_and_metrics.dart": {
+    "old_identifier_name": "syncOriginalAndMetrics",
+    "new_identifier_name": "syncOriginalAndMetrics",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "da769ed6cb404a286b54531522e66ed6c035fc3eba12474f69cab6139ee7d938",
+    "original_checksum": "da769ed6cb404a286b54531522e66ed6c035fc3eba12474f69cab6139ee7d938"
+  },
+  "lib/custom_code/actions/perm_sync_original_and_metrics.dart": {
+    "old_identifier_name": "permSyncOriginalAndMetrics",
+    "new_identifier_name": "permSyncOriginalAndMetrics",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "31f66080b575ab921d0133ae50dacb04577be01566f64caecb8e252b75c143f0",
+    "original_checksum": "31f66080b575ab921d0133ae50dacb04577be01566f64caecb8e252b75c143f0"
+  },
+  "lib/custom_code/actions/check_for_missed_chat_sync.dart": {
+    "old_identifier_name": "checkForMissedChatSync",
+    "new_identifier_name": "checkForMissedChatSync",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "52ac0e29b0f79c113ba7c254f023cd8355432a79e8f59a57741218518faad21e",
+    "original_checksum": "52ac0e29b0f79c113ba7c254f023cd8355432a79e8f59a57741218518faad21e"
+  },
+  "lib/custom_code/actions/get_chat_summary_and_notify.dart": {
+    "old_identifier_name": "getChatSummaryAndNotify",
+    "new_identifier_name": "getChatSummaryAndNotify",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "06010f03151b0b9c5e9e0430d72102dc8159a8c0b019382fb61180fa45d98633",
+    "original_checksum": "06010f03151b0b9c5e9e0430d72102dc8159a8c0b019382fb61180fa45d98633"
+  },
+  "lib/custom_code/actions/post_chat_feedback.dart": {
+    "old_identifier_name": "postChatFeedback",
+    "new_identifier_name": "postChatFeedback",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "56163970a8de43ff3fbccb02577176842090816245ceb4f246329734791393c4",
+    "original_checksum": "56163970a8de43ff3fbccb02577176842090816245ceb4f246329734791393c4"
+  },
+  "lib/custom_code/actions/submit_report.dart": {
+    "old_identifier_name": "submitReport",
+    "new_identifier_name": "submitReport",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "8a00af34152964aeb5a59ca36d732ba3119dfe2b3cc4827766f6f4694fed9f26",
+    "original_checksum": "8a00af34152964aeb5a59ca36d732ba3119dfe2b3cc4827766f6f4694fed9f26"
+  },
+  "lib/custom_code/actions/get_my_revealed_users_list.dart": {
+    "old_identifier_name": "getMyRevealedUsersList",
+    "new_identifier_name": "getMyRevealedUsersList",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "132d499c5a7452179ae4b34e5e3f5d0f5cdb20fcb1884a5ac72f4d934b63f5d0",
+    "original_checksum": "132d499c5a7452179ae4b34e5e3f5d0f5cdb20fcb1884a5ac72f4d934b63f5d0"
+  },
+  "lib/custom_code/actions/verify_digi_locker_profile_action.dart": {
+    "old_identifier_name": "verifyDigiLockerProfileAction",
+    "new_identifier_name": "verifyDigiLockerProfileAction",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "f22b8a12fc577cabadffc2bc3b51fc4e965abfd6a7a5e584df42d5de5b6e6fc4",
+    "original_checksum": "f22b8a12fc577cabadffc2bc3b51fc4e965abfd6a7a5e584df42d5de5b6e6fc4"
+  },
+  "lib/custom_code/actions/send_phone_verification_code.dart": {
+    "old_identifier_name": "sendPhoneVerificationCode",
+    "new_identifier_name": "sendPhoneVerificationCode",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "bd1c03ffcd6e032cbd612344f03a2cd453ba64d0302ca28374d4bcd11f5ef7f9",
+    "original_checksum": "bd1c03ffcd6e032cbd612344f03a2cd453ba64d0302ca28374d4bcd11f5ef7f9"
+  },
+  "lib/custom_code/actions/update_firebase_user_phone_number.dart": {
+    "old_identifier_name": "updateFirebaseUserPhoneNumber",
+    "new_identifier_name": "updateFirebaseUserPhoneNumber",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "88005eaada50596896698c50767187aa3a8e24835803cb1482ec0b181c43b9d3",
+    "original_checksum": "88005eaada50596896698c50767187aa3a8e24835803cb1482ec0b181c43b9d3"
+  },
+  "lib/custom_code/actions/initiate_digi_locker_action.dart": {
+    "old_identifier_name": "initiateDigiLockerAction",
+    "new_identifier_name": "initiateDigiLockerAction",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "e982ebe7bee05e1ee7210c11e52ba0eb759a3bc3d503ee1b5a1a81822fa547eb",
+    "original_checksum": "e982ebe7bee05e1ee7210c11e52ba0eb759a3bc3d503ee1b5a1a81822fa547eb"
+  },
+  "lib/custom_code/actions/call_manage_perm_request.dart": {
+    "old_identifier_name": "callManagePermRequest",
+    "new_identifier_name": "callManagePermRequest",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "14a8564f40060f50dcd42bbce7e19f76f95d4103399dfe786c83be8493dc6ee4",
+    "original_checksum": "14a8564f40060f50dcd42bbce7e19f76f95d4103399dfe786c83be8493dc6ee4"
+  },
+  "lib/custom_code/actions/call_delete_perm_connection.dart": {
+    "old_identifier_name": "callDeletePermConnection",
+    "new_identifier_name": "callDeletePermConnection",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "54bad178778ef47fd5418936fe9cbdb01f40708ab5a86ded53cf099268b9e4f2",
+    "original_checksum": "54bad178778ef47fd5418936fe9cbdb01f40708ab5a86ded53cf099268b9e4f2"
+  },
+  "lib/custom_code/actions/call_delete_user_account.dart": {
+    "old_identifier_name": "callDeleteUserAccount",
+    "new_identifier_name": "callDeleteUserAccount",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "ce4d1aefd104dba830fd2772a7e6cf8dc57d855a0ba801094904e2e09545ea44",
+    "original_checksum": "ce4d1aefd104dba830fd2772a7e6cf8dc57d855a0ba801094904e2e09545ea44"
+  },
+  "lib/custom_code/actions/call_download_user_data.dart": {
+    "old_identifier_name": "callDownloadUserData",
+    "new_identifier_name": "callDownloadUserData",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "c31a93f9d731e42c9510f68b60c33789c54b7240c61be40bd600913c3750384c",
+    "original_checksum": "c31a93f9d731e42c9510f68b60c33789c54b7240c61be40bd600913c3750384c"
+  },
+  "lib/custom_code/actions/reset_pulse_listeners.dart": {
+    "old_identifier_name": "resetPulseListeners",
+    "new_identifier_name": "resetPulseListeners",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "c5369fe504a5306f4e988d035eb801c4c19a551df96112dad88db31fd69ca246",
+    "original_checksum": "c5369fe504a5306f4e988d035eb801c4c19a551df96112dad88db31fd69ca246"
+  },
+  "lib/custom_code/actions/verify_otp.dart": {
+    "old_identifier_name": "verifyOtp",
+    "new_identifier_name": "verifyOtp",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "303355ad5a7e077abae0ee0f4fc335e6aabf478a15204320b8826cf3a1a32f9c",
+    "original_checksum": "303355ad5a7e077abae0ee0f4fc335e6aabf478a15204320b8826cf3a1a32f9c"
+  },
+  "lib/custom_code/actions/wait_for_user_and_profile.dart": {
+    "old_identifier_name": "waitForUserAndProfile",
+    "new_identifier_name": "waitForUserAndProfile",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "442b97d17d8ae8f1d6c46910821f507f7805111b78f37527018f2d2e3e6539dd",
+    "original_checksum": "442b97d17d8ae8f1d6c46910821f507f7805111b78f37527018f2d2e3e6539dd"
+  },
+  "lib/custom_code/widgets/smart_image.dart": {
+    "old_identifier_name": "SmartImage",
+    "new_identifier_name": "SmartImage",
+    "type": "W",
+    "is_deleted": false,
+    "current_checksum": "fbe7889bf2413706f55135126abc2e6f1c3abfc2000de9dce2eb42ca82ed639d",
+    "original_checksum": "fbe7889bf2413706f55135126abc2e6f1c3abfc2000de9dce2eb42ca82ed639d"
+  },
+  "lib/custom_code/widgets/typing_metrics_widget.dart": {
+    "old_identifier_name": "TypingMetricsWidget",
+    "new_identifier_name": "TypingMetricsWidget",
+    "type": "W",
+    "is_deleted": false,
+    "current_checksum": "02d4c591422d624d1bee4dc0ac1553e1e51feb184a7e46f5c587e376fe3e0c4b",
+    "original_checksum": "02d4c591422d624d1bee4dc0ac1553e1e51feb184a7e46f5c587e376fe3e0c4b"
+  },
+  "lib/custom_code/widgets/hive_chat_list.dart": {
+    "old_identifier_name": "HiveChatList",
+    "new_identifier_name": "HiveChatList",
+    "type": "W",
+    "is_deleted": false,
+    "current_checksum": "c0098e05a762596aa060442cad03ee005f6437bcd3e9ba76070225beff6d35df",
+    "original_checksum": "c0098e05a762596aa060442cad03ee005f6437bcd3e9ba76070225beff6d35df"
+  },
+  "lib/custom_code/functions/generate_mystery_name.dart": {
+    "old_identifier_name": "generateMysteryName",
+    "new_identifier_name": "generateMysteryName",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "53e874c1d2d712f522f85b9afba1483dd112be811732a5ec35b20314b50d2a17",
+    "original_checksum": "53e874c1d2d712f522f85b9afba1483dd112be811732a5ec35b20314b50d2a17"
+  },
+  "lib/custom_code/functions/min_max_calender.dart": {
+    "old_identifier_name": "minMaxCalender",
+    "new_identifier_name": "minMaxCalender",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "7937bf1745f1393f3180ed91e43403cee8b8bbfc26b680eb76d6f8a914e1e114",
+    "original_checksum": "7937bf1745f1393f3180ed91e43403cee8b8bbfc26b680eb76d6f8a914e1e114"
+  },
+  "lib/custom_code/functions/convert_to_string.dart": {
+    "old_identifier_name": "convertToString",
+    "new_identifier_name": "convertToString",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "ec1eae780fea9a5eff171ad85cb136a2fc689a3b41b413ae77b639d853b76198",
+    "original_checksum": "ec1eae780fea9a5eff171ad85cb136a2fc689a3b41b413ae77b639d853b76198"
+  },
+  "lib/custom_code/functions/is_slot_visible.dart": {
+    "old_identifier_name": "isSlotVisible",
+    "new_identifier_name": "isSlotVisible",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "893b0e6e03c4db15f029df967a2ff66f652e97161c6d6dfec6e1a82ddffc9bb4",
+    "original_checksum": "893b0e6e03c4db15f029df967a2ff66f652e97161c6d6dfec6e1a82ddffc9bb4"
+  },
+  "lib/custom_code/functions/get_initial_timer_ms.dart": {
+    "old_identifier_name": "getInitialTimerMs",
+    "new_identifier_name": "getInitialTimerMs",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "00cb36ce786a307e5a5f33eb110ab3533db9d18560cdb5fec4b5b8d3b5d604cb",
+    "original_checksum": "00cb36ce786a307e5a5f33eb110ab3533db9d18560cdb5fec4b5b8d3b5d604cb"
+  },
+  "lib/custom_code/functions/internal_clean_message.dart": {
+    "old_identifier_name": "internalCleanMessage",
+    "new_identifier_name": "internalCleanMessage",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "92a581eccd29925b68ee50a23de299a51eaa3600f8524fa1a547877721e2ae8e",
+    "original_checksum": "92a581eccd29925b68ee50a23de299a51eaa3600f8524fa1a547877721e2ae8e"
+  },
+  "lib/custom_code/functions/get_timestamp_from_firestore_string.dart": {
+    "old_identifier_name": "getTimestampFromFirestoreString",
+    "new_identifier_name": "getTimestampFromFirestoreString",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "c5674bd565db3722e4aa25c094d02e34cef61d26f9250c1ba807d835e49dffa5",
+    "original_checksum": "c5674bd565db3722e4aa25c094d02e34cef61d26f9250c1ba807d835e49dffa5"
+  },
+  "lib/custom_code/functions/generate_random_vibe.dart": {
+    "old_identifier_name": "generateRandomVibe",
+    "new_identifier_name": "generateRandomVibe",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "0fc6a69e93cea07ca6e3ee5a18fe9d5ddb5426c159061c82e989cb1eb8978a1b",
+    "original_checksum": "0fc6a69e93cea07ca6e3ee5a18fe9d5ddb5426c159061c82e989cb1eb8978a1b"
+  },
+  "lib/custom_code/functions/format_expiry_date.dart": {
+    "old_identifier_name": "formatExpiryDate",
+    "new_identifier_name": "formatExpiryDate",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "941be23ac57c3cc5a718ca8eec5434344abe30014b81dc49cbc2d9a215fa7902",
+    "original_checksum": "941be23ac57c3cc5a718ca8eec5434344abe30014b81dc49cbc2d9a215fa7902"
+  },
+  "lib/custom_code/functions/calculate_age.dart": {
+    "old_identifier_name": "calculateAge",
+    "new_identifier_name": "calculateAge",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "40c83a3357aeb2c3b9557c998dafb421a871f307177d2218103bd619ea3ef17c",
+    "original_checksum": "40c83a3357aeb2c3b9557c998dafb421a871f307177d2218103bd619ea3ef17c"
+  },
+  "lib/custom_code/functions/get_vibe_scores_list.dart": {
+    "old_identifier_name": "getVibeScoresList",
+    "new_identifier_name": "getVibeScoresList",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "827433a1847b1791f4c855b049f5058fac8c0e23401ca514e385623340bf121f",
+    "original_checksum": "827433a1847b1791f4c855b049f5058fac8c0e23401ca514e385623340bf121f"
+  },
+  "lib/custom_code/functions/format_dob_to_display.dart": {
+    "old_identifier_name": "formatDobToDisplay",
+    "new_identifier_name": "formatDobToDisplay",
+    "type": "F",
+    "is_deleted": false,
+    "current_checksum": "8cdd5af82184896eecb720107492509d2444989e24b97e303d51bcdbd8226123",
+    "original_checksum": "8cdd5af82184896eecb720107492509d2444989e24b97e303d51bcdbd8226123"
+  },
+  "pubspec.yaml": {
+    "old_identifier_name": "pubspec.yaml",
+    "new_identifier_name": "pubspec.yaml",
+    "type": "D",
+    "is_deleted": false,
+    "current_checksum": "06fefd3603584436ba08ea2bbdcfef14f9566aacb1f93b26e157ba90e4ef09b5",
+    "original_checksum": "06fefd3603584436ba08ea2bbdcfef14f9566aacb1f93b26e157ba90e4ef09b5"
+  },
+  "lib/custom_code/widgets/empty_state.dart": {
+    "old_identifier_name": "EmptyState",
+    "new_identifier_name": "EmptyState",
+    "type": "W",
+    "is_deleted": false,
+    "current_checksum": "07c272e379043ed490112ec5632e9cd945e2122cf035cfa7ff644491bef1e3c1",
+    "original_checksum": "07c272e379043ed490112ec5632e9cd945e2122cf035cfa7ff644491bef1e3c1"
+  },
+  "lib/custom_code/actions/resume_active_chat.dart": {
+    "old_identifier_name": "resumeActiveChat",
+    "new_identifier_name": "resumeActiveChat",
+    "type": "A",
+    "is_deleted": false,
+    "original_checksum": "5737eea0874ac69456d00cb56721461bf66bca9a82b56ffda34fc69810ad5531",
+    "current_checksum": "5737eea0874ac69456d00cb56721461bf66bca9a82b56ffda34fc69810ad5531"
+  },
+  "lib/custom_code/functions/clamped_chat_progress.dart": {
+    "old_identifier_name": "clampedChatProgress",
+    "new_identifier_name": "clampedChatProgress",
+    "type": "F",
+    "is_deleted": false,
+    "original_checksum": "7c50a7109c4b8c01c2817529ccfe27fb5caac2ce474ae54e39cfe228542d30fb",
+    "current_checksum": "7c50a7109c4b8c01c2817529ccfe27fb5caac2ce474ae54e39cfe228542d30fb"
+  },
+  "lib/custom_code/actions/enable_chat_screen_guard.dart": {
+    "old_identifier_name": "enableChatScreenGuard",
+    "new_identifier_name": "enableChatScreenGuard",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "90eeb55fa5af761a826ac31d68460cf188ef5234dc062cc431ece64218b21ff4",
+    "original_checksum": "90eeb55fa5af761a826ac31d68460cf188ef5234dc062cc431ece64218b21ff4"
+  },
+  "lib/custom_code/actions/disable_chat_screen_guard.dart": {
+    "old_identifier_name": "disableChatScreenGuard",
+    "new_identifier_name": "disableChatScreenGuard",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "3f2a614887c9392180d15d7645a892445d585ad3fd7a8894fe8f7e279e16030a",
+    "original_checksum": "3f2a614887c9392180d15d7645a892445d585ad3fd7a8894fe8f7e279e16030a"
+  },
+  "lib/custom_code/actions/toggle_reveal_field.dart": {
+    "old_identifier_name": "toggleRevealField",
+    "new_identifier_name": "toggleRevealField",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "7564caeccf176c851a8256290ec734b5352672488e81ecc48aed73f63ba9c99c",
+    "original_checksum": "7564caeccf176c851a8256290ec734b5352672488e81ecc48aed73f63ba9c99c"
+  },
+  "lib/custom_code/actions/rtdb_now_ms.dart": {
+    "old_identifier_name": "rtdbNowMs",
+    "new_identifier_name": "rtdbNowMs",
+    "type": "A",
+    "is_deleted": false,
+    "original_checksum": "9d8c5f616ab10b0ebe2a9a9c7e3624a30f7e449263bb9bf3224232a6e062c2ad",
+    "current_checksum": "9d8c5f616ab10b0ebe2a9a9c7e3624a30f7e449263bb9bf3224232a6e062c2ad"
+  },
+  "lib/custom_code/widgets/live_epoch_timer.dart": {
+    "old_identifier_name": "LiveEpochTimer",
+    "new_identifier_name": "LiveEpochTimer",
+    "type": "W",
+    "is_deleted": false,
+    "current_checksum": "2d4740a16a0ed73d3c71a039efe150023655ff8d402ae364e53cc6932514c78b",
+    "original_checksum": "2d4740a16a0ed73d3c71a039efe150023655ff8d402ae364e53cc6932514c78b"
+  },
+  "lib/custom_code/actions/expire_active_chat.dart": {
+    "old_identifier_name": "expireActiveChat",
+    "new_identifier_name": "expireActiveChat",
+    "type": "A",
+    "is_deleted": false,
+    "current_checksum": "b5fc77e22fac67500a3c8e5cf7f3baf47880fe8b32e7f34d7814e0ff6a14c1bd",
+    "original_checksum": "b5fc77e22fac67500a3c8e5cf7f3baf47880fe8b32e7f34d7814e0ff6a14c1bd"
+  },
+  "lib/custom_code/widgets/live_chat_progress.dart": {
+    "old_identifier_name": "LiveChatProgress",
+    "new_identifier_name": "LiveChatProgress",
+    "type": "W",
+    "is_deleted": false
+  }
+}

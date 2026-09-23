@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "487401790901",
+    "firebase_url": "https://blindapp-489217-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "blindapp-489217",
+    "storage_bucket": "blindapp-489217.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:487401790901:android:f80a010270673ec2268dfc",
+        "android_client_info": {
+          "package_name": "com.omnibolt.blindapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSXptQ-Cl8dN1WGaxkB_AfBX7rEaZNYtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
