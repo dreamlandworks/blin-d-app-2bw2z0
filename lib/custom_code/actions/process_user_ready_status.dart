@@ -7,12 +7,7 @@ import '/backend/backend.dart';
 
 import 'package:flutter/foundation.dart';
 
-// Imports other custom actions
-// Imports custom functions
-
-// Imports other custom actions
-// Imports custom functions
-
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 Future<dynamic> processUserReadyStatus(
@@ -21,26 +16,43 @@ Future<dynamic> processUserReadyStatus(
 
   try {
     final bool isPremium = isPremiumStatus;
-    DateTime now = DateTime.now(); // This is already local time
+    DateTime now = DateTime.now();
 
-    // 1. Define Cooldown Duration
-    int cooldownHours = isPremium ? 2 : 24;
-    DateTime cooldownTarget = now.add(Duration(hours: cooldownHours));
-
-    // 2. Prepare Timestamps (Integers)
-    int readyTimeStamp = now.millisecondsSinceEpoch;
-    int cooldownUntilStamp = cooldownTarget.millisecondsSinceEpoch;
-    String status = 'active';
-
-    // 3. Initialize RTDB
     final rtdb = FirebaseDatabase.instanceFor(
       app: Firebase.app(),
       databaseURL:
           'https://blindapp-489217-default-rtdb.asia-southeast1.firebasedatabase.app/',
     );
 
-    // 4. Update RTDB directly
-    // Using a Map is safer for 'update' operations in RTDB
+    final snap = await rtdb.ref('appStats/$userId').get();
+    if (snap.exists) {
+      final data = snap.value;
+      if (data is Map) {
+        final st = data['st']?.toString() ?? '';
+        final ct = int.tryParse(data['ct']?.toString() ?? '') ?? 0;
+        if ((st == 'cooldown' || st == 'chatting') &&
+            ct > now.millisecondsSinceEpoch) {
+          if (kDebugMode) {
+            print('processUserReadyStatus blocked — st=$st ct=$ct');
+          }
+          return {
+            'ready_status': 'cooldown',
+            'ready_time': data['la'],
+            'cooldown_until': ct,
+            'is_premium': isPremium,
+            'blocked': true,
+          };
+        }
+      }
+    }
+
+    int cooldownHours = isPremium ? 2 : 24;
+    DateTime cooldownTarget = now.add(Duration(hours: cooldownHours));
+
+    int readyTimeStamp = now.millisecondsSinceEpoch;
+    int cooldownUntilStamp = cooldownTarget.millisecondsSinceEpoch;
+    String status = 'active';
+
     await rtdb
         .ref('appStats/$userId')
         .update({'la': readyTimeStamp, 'st': status, 'ct': cooldownUntilStamp});
@@ -49,7 +61,6 @@ Future<dynamic> processUserReadyStatus(
       print("User Status Processed: $status. Cooldown until: $cooldownTarget");
     }
 
-    // 5. Return JSON to FlutterFlow
     return {
       'ready_status': status,
       'ready_time': readyTimeStamp,
@@ -63,5 +74,3 @@ Future<dynamic> processUserReadyStatus(
     return null;
   }
 }
-// Set your action name, define your arguments and return parameter,
-// and then add the boilerplate code using the green button on the right!

@@ -7,6 +7,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 
 import 'package:cloud_functions/cloud_functions.dart';
 
+import '/custom_code/actions/expire_active_chat.dart';
+
 Future<dynamic> submitReport(
   String partnerUid,
   String chatId,
@@ -31,6 +33,20 @@ Future<dynamic> submitReport(
       'category': category,
       'additionalDetails': additionalDetails,
     });
+
+    final cooldownUntil =
+        int.tryParse(result.data['cooldownUntil']?.toString() ?? '') ?? 0;
+    if (cooldownUntil > 0) {
+      FFAppState().updateOnReadyStruct((s) {
+        s.readyStatus = 'cooldown';
+        s.cooldownUntil = cooldownUntil;
+        s.slotId = [];
+      });
+    }
+    // Do not navigate here — Report page shows a SnackBar after this
+    // action returns. Navigating first deactivates that context.
+    await applyChatCooldownOnly();
+    goDashboardSoon();
 
     return {
       'success': true,

@@ -37,6 +37,55 @@ void _goPostChat(String chatId) {
   }
 }
 
+void goDashboardSoon() {
+  Future<void>.delayed(const Duration(milliseconds: 1600), () {
+    final nav = appNavigatorKey.currentContext;
+    if (nav == null || !nav.mounted) {
+      return;
+    }
+    try {
+      nav.goNamed('dashboard');
+    } catch (e) {
+      if (kDebugMode) {
+        print('goDashboardSoon: $e');
+      }
+    }
+  });
+}
+
+Future<int> applyChatCooldownOnly() async {
+  final cooldownMs = FFAppState().isPremium ? 10800000 : 72000000;
+  final existing = FFAppState().onReady.cooldownUntil;
+  final now = DateTime.now().millisecondsSinceEpoch;
+  final cooldownUntil =
+      existing > now ? existing : now + cooldownMs;
+
+  FFAppState().update(() {
+    FFAppState().chatId = '';
+    FFAppState().updateOnReadyStruct((s) {
+      s.readyStatus = 'cooldown';
+      s.cooldownUntil = cooldownUntil;
+      s.slotId = [];
+    });
+  });
+
+  final uid = currentUserUid;
+  if (uid.isNotEmpty) {
+    final rtdb = FirebaseDatabase.instanceFor(
+      app: Firebase.app(),
+      databaseURL:
+          'https://blindapp-489217-default-rtdb.asia-southeast1.firebasedatabase.app/',
+    );
+    await rtdb.ref().update({
+      'appStats/$uid/st': 'cooldown',
+      'appStats/$uid/ct': cooldownUntil,
+      'appStats/$uid/activeChatId': null,
+      'appStats/$uid/sid': null,
+    });
+  }
+  return cooldownUntil;
+}
+
 Future expireActiveChat() async {
   final chatId = FFAppState().chatId.trim();
   if (chatId.isEmpty || chatId == 'romantic_demo') {
@@ -50,29 +99,10 @@ Future expireActiveChat() async {
   _chatExpiryRunning = true;
 
   try {
-    final cooldownMs = FFAppState().isPremium ? 10800000 : 72000000;
-    final cooldownUntil = DateTime.now().millisecondsSinceEpoch + cooldownMs;
-    FFAppState().updateOnReadyStruct((s) {
-      s.readyStatus = 'cooldown';
-      s.cooldownUntil = cooldownUntil;
-    });
-
-    final uid = currentUserUid;
-    if (uid.isNotEmpty) {
-      final rtdb = FirebaseDatabase.instanceFor(
-        app: Firebase.app(),
-        databaseURL:
-            'https://blindapp-489217-default-rtdb.asia-southeast1.firebasedatabase.app/',
-      );
-      await rtdb.ref().update({
-        'appStats/$uid/st': 'cooldown',
-        'appStats/$uid/ct': cooldownUntil,
-        'appStats/$uid/activeChatId': null,
-      });
-    }
-
+    await applyChatCooldownOnly();
     _goPostChat(chatId);
 
+    final uid = currentUserUid;
     if (uid.isNotEmpty) {
       await syncOriginalAndMetrics(chatId, uid, true);
     }
@@ -81,6 +111,7 @@ Future expireActiveChat() async {
     if (kDebugMode) {
       print('expireActiveChat: $e');
     }
+  } finally {
     _chatExpiryRunning = false;
   }
 }

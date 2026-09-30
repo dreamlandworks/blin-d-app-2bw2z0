@@ -4,17 +4,10 @@
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-// Imports other custom actions
-// Imports custom functions
-
-// Imports other custom actions
-// Imports custom functions
-
-// Imports other custom actions
-// Imports custom functions
-
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/foundation.dart';
+
+import '/custom_code/actions/fetch_revealed_profile.dart';
 
 Future<dynamic> getMyRevealedUsersList() async {
   try {
@@ -22,11 +15,13 @@ Future<dynamic> getMyRevealedUsersList() async {
         .httpsCallable('getMyRevealedUsersList')
         .call();
 
-    if (result.data['success'] == true) {
-      return result
-          .data; // return the whole object, not just result.data['reveals']
+    final data = jsonSafe(result.data);
+    if (data is Map && data['success'] == true) {
+      bumpUiAfterAssign();
+      return data;
     }
 
+    bumpUiAfterAssign();
     return {
       'success': false,
       'perm_connections': [],
@@ -44,5 +39,3 @@ Future<dynamic> getMyRevealedUsersList() async {
     return {'success': false, 'perm_connections': [], 'reveals': []};
   }
 }
-// Set your action name, define your arguments and return parameter,
-// and then add the boilerplate code using the `</>` button on the right!

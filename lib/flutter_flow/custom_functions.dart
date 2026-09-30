@@ -11,3 +11,4 @@ export '/custom_code/functions/calculate_age.dart';
 export '/custom_code/functions/get_vibe_scores_list.dart';
 export '/custom_code/functions/format_dob_to_display.dart';
 export '/custom_code/functions/clamped_chat_progress.dart';
+export '/custom_code/functions/format_timer_display.dart';

@@ -1,23 +1,21 @@
 // Automatic FlutterFlow imports
+import '/flutter_flow/flutter_flow_util.dart';
 // Imports other custom actions
 // Imports custom functions
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-// Imports other custom actions
-// Imports custom functions
-
-// Imports other custom actions
-// Imports custom functions
-
 import 'package:cloud_functions/cloud_functions.dart';
+
+import '/auth/firebase_auth/auth_util.dart';
+import '/custom_code/actions/fetch_revealed_profile.dart';
 
 Future<dynamic> callRevealAction(
   String baseRequestId,
   String senderUid,
   String chatId,
   String action,
-  List<String> revealList, // ✅ non-nullable — pass [] when action is "reject"
+  List<String> revealList,
 ) async {
   try {
     final Map<String, dynamic> payload = {
@@ -35,12 +33,33 @@ Future<dynamic> callRevealAction(
         .httpsCallable('confirm_reveal')
         .call(payload);
 
-    final data = result.data;
+    final data = jsonSafe(result.data);
+    if (action == 'accept' && data is Map) {
+      final cost = int.tryParse(data['cost']?.toString() ?? '') ?? 0;
+      final coinsLeft = int.tryParse(data['coins']?.toString() ?? '');
+      final iPaid = currentUserUid == senderUid.trim();
+      FFAppState().update(() {
+        FFAppState().updateChatStatsStruct((s) {
+          s.isRevealed = true;
+        });
+        if (iPaid) {
+          if (coinsLeft != null) {
+            FFAppState().coins = coinsLeft;
+          } else if (cost > 0 && FFAppState().coins >= cost) {
+            FFAppState().coins = FFAppState().coins - cost;
+          }
+        }
+      });
+      final partner = senderUid.trim();
+      if (partner.isNotEmpty) {
+        await fetchRevealedProfile(partner);
+      }
+    }
 
     return {
       'success': true,
-      'status': data['status']?.toString() ?? '',
-      'cost': data['cost'] ?? 0,
+      'status': data is Map ? data['status']?.toString() ?? '' : '',
+      'cost': data is Map ? data['cost'] ?? 0 : 0,
     };
   } on FirebaseFunctionsException catch (e) {
     return {
@@ -56,5 +75,3 @@ Future<dynamic> callRevealAction(
     };
   }
 }
-// your action name, define your arguments and return parameter,
-// and then add the boilerplate code using the green button on the right!

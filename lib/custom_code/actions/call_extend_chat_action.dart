@@ -45,6 +45,19 @@ Future<dynamic> callExtendChatAction(
     if (newEnd > 0) {
       applyChatEndTime(newEnd);
     }
+    final coinsLeft = data is Map
+        ? int.tryParse(data['coins']?.toString() ?? '') ?? -1
+        : -1;
+    if (coinsLeft >= 0) {
+      FFAppState().update(() {
+        FFAppState().coins = coinsLeft;
+      });
+    } else if (data is Map && data['status']?.toString() == 'success') {
+      FFAppState().update(() {
+        final next = FFAppState().coins - 2;
+        FFAppState().coins = next < 0 ? 0 : next;
+      });
+    }
     if (kDebugMode) {
       print(
           '✅ Extend chat success newEndTime=$newEnd remaining=${FFAppState().endTime}');

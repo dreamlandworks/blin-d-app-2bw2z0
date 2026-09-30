@@ -66,6 +66,7 @@ Future rtdbToAppState(String userId) async {
       FFAppState().appStatsRtdb = statsData;
 
       if (FFAppState().onReady.readyStatus != 'chatting' &&
+          FFAppState().onReady.readyStatus != 'cooldown' &&
           FFAppState().onReady.slotId.isEmpty) {
         final restored = _onReadyFromRtdb(data);
         if (restored != null) {
