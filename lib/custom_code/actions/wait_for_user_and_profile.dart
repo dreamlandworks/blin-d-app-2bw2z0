@@ -20,6 +20,8 @@ import '/backend/backend.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:async';
 
+import '/custom_code/actions/expire_cooldown_if_due.dart';
+
 Future<String> waitForUserAndProfile() async {
   final auth = FirebaseAuth.instance;
   final firestore = FirebaseFirestore.instance;
@@ -60,7 +62,11 @@ Future<String> waitForUserAndProfile() async {
 
   final data = doc.data()!;
   final name = data['display_name'] ?? data['displayName'] ?? '';
-  return name.isNotEmpty ? 'success' : 'onboarding';
+  if (name.isEmpty) {
+    return 'onboarding';
+  }
+  await expireCooldownIfDue();
+  return 'success';
 }
 // Set your action name, define your arguments and return parameter,
 // and then add the boilerplate code using the `</>` button on the right!

@@ -100,4 +100,6 @@ export 'enable_chat_screen_guard.dart' show enableChatScreenGuard;
 export 'disable_chat_screen_guard.dart' show disableChatScreenGuard;
 export 'toggle_reveal_field.dart' show toggleRevealField;
 export 'rtdb_now_ms.dart' show rtdbNowMs;
-export 'expire_active_chat.dart' show expireActiveChat;
+export 'expire_active_chat.dart'
+    show expireActiveChat, applyChatCooldownOnly, goDashboardSoon;
+export 'expire_cooldown_if_due.dart' show expireCooldownIfDue;

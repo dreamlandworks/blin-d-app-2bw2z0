@@ -16,6 +16,7 @@ import 'package:flutter/foundation.dart';
 // Imports custom functions
 
 import 'package:firebase_database/firebase_database.dart';
+import '/custom_code/actions/expire_cooldown_if_due.dart';
 import '/custom_code/actions/get_future_slot_timestamps.dart';
 
 Future rtdbToAppState(String userId) async {
@@ -65,13 +66,20 @@ Future rtdbToAppState(String userId) async {
       // 2. Use the standard FFAppState call
       FFAppState().appStatsRtdb = statsData;
 
-      if (FFAppState().onReady.readyStatus != 'chatting' &&
-          FFAppState().onReady.readyStatus != 'cooldown' &&
-          FFAppState().onReady.slotId.isEmpty) {
+      final chatId = FFAppState().chatId.trim();
+      final endAt = FFAppState().chatEndTime;
+      final stillInChat =
+          chatId.isNotEmpty && endAt > DateTime.now().millisecondsSinceEpoch;
+      if (stillInChat) {
+        if (FFAppState().onReady.readyStatus != 'chatting') {
+          FFAppState().updateOnReadyStruct((s) => s.readyStatus = 'chatting');
+        }
+      } else {
         final restored = _onReadyFromRtdb(data);
         if (restored != null) {
           FFAppState().onReady = restored;
         }
+        await expireCooldownIfDue();
       }
 
       if (kDebugMode) {

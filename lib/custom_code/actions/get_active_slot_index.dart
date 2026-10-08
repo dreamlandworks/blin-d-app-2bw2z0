@@ -12,12 +12,23 @@
 
 import 'package:flutter/foundation.dart';
 
+import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/actions/expire_cooldown_if_due.dart';
+
 Future<int?> getActiveSlotIndex(
   String readyStatus,
   List<int>? slotTimers,
 ) async {
+  await expireCooldownIfDue();
+  final ready = FFAppState().onReady;
+  final status =
+      ready.readyStatus.isNotEmpty ? ready.readyStatus : readyStatus;
+  final timers = ready.slotStartTimer.isNotEmpty
+      ? ready.slotStartTimer.toList()
+      : (slotTimers ?? <int>[]);
+
   // 1. If chatting, user is busy. Return null.
-  if (readyStatus == 'chatting' || slotTimers == null || slotTimers.isEmpty) {
+  if (status == 'chatting' || timers.isEmpty) {
     if (kDebugMode) {
       print("slotTimers is null or Empty");
     }
@@ -27,12 +38,12 @@ Future<int?> getActiveSlotIndex(
   // 2. Map timestamps to their original indices: {timestamp: originalIndex}
   // Example: {1711041000: 0, 1711051000: 1 ...}
   Map<int, int> originMap = {};
-  for (int i = 0; i < slotTimers.length; i++) {
-    originMap[slotTimers[i]] = i;
+  for (int i = 0; i < timers.length; i++) {
+    originMap[timers[i]] = i;
   }
 
   // 3. Create a sorted version of the timestamps
-  List<int> sortedTimers = List<int>.from(slotTimers)..sort();
+  List<int> sortedTimers = List<int>.from(timers)..sort();
 
   int now = DateTime.now().millisecondsSinceEpoch;
 
