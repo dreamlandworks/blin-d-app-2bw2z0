@@ -4,7 +4,7 @@ import 'dart:io';
 
 import 'package:flutterflow_ai/flutterflow_ai.dart';
 
-import '../lib/flutterflow_project/schemas.dart' show CustomWidgets;
+import '../lib/flutterflow_project/pages/dashboard.dart' show dashboardHandle;
 
 Future<void> main(List<String> args) async {
   if (Platform.environment['_FF_AI_DSL_LAUNCHER'] != '1') {
@@ -146,43 +146,41 @@ String _customCodeAfterHeader(String path) {
 }
 
 void buildStarterEditFlow(App app) {
-  app.customAction(
-    'expireCooldownIfDue',
-    returns: bool_,
-    description:
-        'Expires cooldown on RTDB and appState when the timer is due. Sets active only if a future slot remains; otherwise inactive and clears leftover slots.',
-    code: _customCodeAfterHeader(
-      'lib/custom_code/actions/expire_cooldown_if_due.dart',
-    ),
-  );
-
-  app.editCustomAction('waitForUserAndProfile', (code) {
-    code.replaceCode(
-      _customCodeAfterHeader(
-        'lib/custom_code/actions/wait_for_user_and_profile.dart',
+  // Last Week's Energy header Row lays out an unconstrained title Column
+  // plus a Trending chip. Ellipsis cannot activate without a max width, so
+  // the row still overflows ~0.9px. Wrap the title Column in Flexible.
+  app.editPage(dashboardHandle, (page) {
+    page.ensureReplaced(
+      page.findByKey('Column_pb8b5hl6'),
+      Flexible(
+        Column(
+          key: 'Column_pb8b5hl6',
+          name: 'EnergyTitleColumn',
+          crossAxis: CrossAxis.start,
+          spacing: 4,
+          children: [
+            Text(
+              'Last Week\'s Energy',
+              key: 'Text_vhjh2gfu',
+              style: Styles.titleMedium,
+              color: Colors.primaryText,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              lineHeight: 1.4,
+            ),
+            Text(
+              'Based on your chat patterns',
+              key: 'Text_hhdjlrj0',
+              style: Styles.bodySmall,
+              color: Colors.secondaryText,
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
+              lineHeight: 1.4,
+            ),
+          ],
+        ),
+        name: 'EnergyTitleFlex',
       ),
-    );
-  });
-
-  app.editCustomAction('rtdbToAppState', (code) {
-    code.replaceCode(
-      _customCodeAfterHeader(
-        'lib/custom_code/actions/rtdb_to_app_state.dart',
-      ),
-    );
-  });
-
-  app.editCustomAction('getActiveSlotIndex', (code) {
-    code.replaceCode(
-      _customCodeAfterHeader(
-        'lib/custom_code/actions/get_active_slot_index.dart',
-      ),
-    );
-  });
-
-  app.editCustomWidget(CustomWidgets.liveEpochTimer, (widget) {
-    widget.replaceCode(
-      File('lib/custom_code/widgets/live_epoch_timer.dart').readAsStringSync(),
     );
   });
 }

@@ -51,6 +51,15 @@ class _IntelCardWidgetState extends State<IntelCardWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final raw = widget.value?.trim() ?? '';
+    final hidden = raw.isEmpty ||
+        raw == 'null' ||
+        raw == 'xxx@xxx.com' ||
+        raw == '+100(1102002)-11' ||
+        raw == 'https://asish.com';
+    if (hidden) {
+      return const SizedBox.shrink();
+    }
     return genzFade(Padding(
       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
       child: Container(

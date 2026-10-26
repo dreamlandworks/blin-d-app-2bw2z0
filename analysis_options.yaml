@@ -26,6 +26,17 @@ analyzer:
     - lib/app_state.dart
     - lib/index.dart
     - lib/main.dart
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - generated_code/**
+    - ff_ai_lib/**
+    - dsl/**
+    - lib/flutterflow_project.dart
+    - lib/flutterflow_project/**
+    - references/**
+    - patterns/**
 
 linter:
   # The lint rules applied to this project can be customized in the
